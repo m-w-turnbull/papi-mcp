@@ -34,7 +34,9 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "dev": "tsx src/server.ts",
-    "lint": "tsc --noEmit",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build && npm test"
   },
   "dependencies": {
@@ -44,10 +46,13 @@
   },
   "devDependencies": {
     "@types/node": "^22.15.21",
-    "typescript": "^5.8.3",
-    "vitest": "^3.2.1",
+    "@typescript-eslint/eslint-plugin": "^8.57.1",
+    "@typescript-eslint/parser": "^8.57.1",
+    "@vitest/coverage-v8": "^3.2.1",
+    "eslint": "^10.0.3",
     "tsx": "^4.19.4",
-    "@vitest/coverage-v8": "^3.2.1"
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.1"
   },
   "engines": {
     "node": ">=18.0.0"
