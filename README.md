@@ -1,6 +1,6 @@
 # papi-mcp
 
-MCP server for Akamai Property Manager (PAPI) configurations. Provides structured tools to read, validate, modify, and activate Akamai CDN properties.
+MCP server for Akamai Property Manager (PAPI) configurations. Gives AI assistants structured access to read, validate, modify, and activate Akamai CDN properties.
 
 ## Features
 
@@ -80,7 +80,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 |------|-------------|
 | `write_snippet` | Create or update a config snippet file. Validates against PapiRule schema. |
 | `apply_behavior` | Add or modify a single behavior in an existing snippet. Useful for targeted changes. |
-| `create_branch` | Create git branch following `akamai/<type>/<description>` naming convention. Types: feature, fix, refactor, chore. |
+| `create_branch` | Create git branch following `akamai/<type>/<description>` naming convention. Types: feature, fix, chore, docs, refactor. |
 | `create_merge_request` | Commit changes, push branch, and open a GitLab MR or GitHub PR. Auto-detects git provider. |
 
 ### Activate & Pipeline (3 tools)
@@ -134,7 +134,7 @@ Create `.papi-mcp.json` in your project root to configure sensitive field redact
 }
 ```
 
-Redaction prevents secrets from appearing in logs and tool outputs.
+Redaction prevents secrets from appearing in logs and AI outputs.
 
 ### Git Provider
 
@@ -158,21 +158,12 @@ export GITHUB_TOKEN=ghp_xxxx
 
 ### Property Metadata (envInfo.json)
 
-Auto-detected from property repo structure. Place in `{propertyName}/envInfo.json`:
+Auto-detected from property repo structure. Place in `{propertyId}_pm/envInfo.json`:
 
 ```json
 {
-  "name": "my-property",
-  "propertyId": 12345,
-  "propertyName": "my-property",
-  "groupId": 67890,
-  "isSecure": false,
-  "latestVersionInfo": {
-    "propertyVersion": 5,
-    "productionStatus": "ACTIVE",
-    "stagingStatus": "ACTIVE",
-    "ruleFormat": "v2024-02-12"
-  }
+  "propertyId": "prp_12345",
+  "groupId": "grp_54321"
 }
 ```
 
@@ -220,7 +211,7 @@ src/
 ├── redaction/
 │   └── redactor.ts             # Config-driven field redaction
 └── skill/
-    └── system-prompt.md        # Akamai domain knowledge layer
+    └── system-prompt.md        # AI domain knowledge layer
 ```
 
 ## Development

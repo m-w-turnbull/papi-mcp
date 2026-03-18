@@ -1,20 +1,20 @@
 # Akamai Property Config Agent
 
 ## Project Overview
-MCP server for authoring, modifying, validating, and activating Akamai Property Manager (PAPI) configuration files. Manages the complete lifecycle from config changes to production activation, with integration into GitLab and GitHub CI/CD pipelines.
+An AI agent for authoring, modifying, validating, and activating Akamai Property Manager (PAPI) configuration files. The agent manages the complete lifecycle from config changes to production activation, with integration into GitLab and GitHub CI/CD pipelines.
 
 ## Architecture
 
 ```
-MCP Client  ── MCP (stdio) ──▶  MCP Server (Akamai Tools)  ──▶  PAPI API (read/validate/activate)
-                                       │
-                                       └──▶  Git Provider (GitLab/GitHub MR/PR)
+Claude Code / Claude Desktop  ──┐
+                                 ├── MCP (stdio) ──▶  MCP Server (Akamai Skills)  →  GitLab/GitHub MR/PR  →  Staging/Production
+VS Code Copilot Chat  ──────────┘
 ```
 
 ### Three Layers
 1. **MCP Server** — Akamai toolbelt (actions, API calls, file ops)
 2. **Skill / System Prompt** — Akamai domain reasoning (rule tree logic, patterns, conventions)
-3. **Platform Adapters** — any MCP-compatible client connects via stdio transport
+3. **Platform Adapters** — Claude Code, Claude Desktop, and VS Code Copilot Chat all connect via stdio MCP transport
 
 ## Explicit Boundaries
 
@@ -67,4 +67,4 @@ MCP Client  ── MCP (stdio) ──▶  MCP Server (Akamai Tools)  ──▶  
 - **PAPI** (Akamai Property Manager API) for config operations and activation
 - **GitLab API** and **GitHub API** for MR/PR creation and pipeline triggering
 - **MCP** (Model Context Protocol) for tool definitions
-- **MCP clients** connect via stdio transport
+- **Claude Code** + **VS Code Copilot Chat** as agent surfaces (both via stdio MCP)
