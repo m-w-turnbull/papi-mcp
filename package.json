@@ -1,5 +1,5 @@
 {
-  "name": "papi-mcp",
+  "name": "@m-w-turnbull/papi-mcp",
   "version": "0.1.0",
   "description": "MCP server for Akamai Property Manager (PAPI) configurations",
   "type": "module",
@@ -7,13 +7,35 @@
   "bin": {
     "papi-mcp": "dist/server.js"
   },
+  "license": "MIT",
+  "author": "m-w-turnbull",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-w-turnbull/papi-mcp.git"
+  },
+  "keywords": [
+    "akamai",
+    "papi",
+    "mcp",
+    "property-manager",
+    "cdn",
+    "edgegrid"
+  ],
+  "files": [
+    "dist",
+    "src/skill/system-prompt.md",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "dev": "tsx src/server.ts",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
