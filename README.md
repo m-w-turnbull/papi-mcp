@@ -14,31 +14,32 @@ MCP server for Akamai Property Manager (PAPI) configurations. Gives AI assistant
 
 ## Quick Start
 
-### Installation
+### Install from npm
 
 ```bash
-npm install
-npm run build
+npm install -g @mwturnbull/papi-mcp
+```
+
+Or run directly with npx:
+
+```bash
+npx @mwturnbull/papi-mcp
 ```
 
 ### Claude Code
 
-Add to your MCP settings (`.cursor/claude_config.json` or Claude settings):
+Add to your Claude Code MCP settings:
 
 ```json
 {
   "mcpServers": {
     "papi-mcp": {
-      "command": "node",
-      "args": ["path/to/papi-mcp/dist/server.js"]
+      "command": "npx",
+      "args": ["@mwturnbull/papi-mcp"]
     }
   }
 }
 ```
-
-### VS Code Copilot Chat
-
-Add the same MCP configuration to your VS Code settings.
 
 ### Claude Desktop
 
@@ -48,11 +49,35 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 {
   "mcpServers": {
     "papi-mcp": {
-      "command": "node",
-      "args": ["path/to/papi-mcp/dist/server.js"]
+      "command": "npx",
+      "args": ["@mwturnbull/papi-mcp"]
     }
   }
 }
+```
+
+### VS Code Copilot Chat
+
+Add to your VS Code MCP settings:
+
+```json
+{
+  "mcpServers": {
+    "papi-mcp": {
+      "command": "npx",
+      "args": ["@mwturnbull/papi-mcp"]
+    }
+  }
+}
+```
+
+### From source
+
+```bash
+git clone https://github.com/m-w-turnbull/papi-mcp.git
+cd papi-mcp
+npm install
+npm run build
 ```
 
 ## Tools
