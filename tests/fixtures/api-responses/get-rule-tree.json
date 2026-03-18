@@ -1,0 +1,25 @@
+{
+  "propertyId": "prp_12345",
+  "propertyVersion": 5,
+  "etag": "abc123def456",
+  "ruleFormat": "v2024-02-12",
+  "rules": {
+    "name": "default",
+    "children": [],
+    "behaviors": [
+      {
+        "name": "cpCode",
+        "options": {
+          "value": {
+            "id": 123456,
+            "name": "my-property"
+          }
+        }
+      }
+    ],
+    "criteria": [],
+    "criteriaMustSatisfy": "all",
+    "options": {},
+    "variables": []
+  }
+}

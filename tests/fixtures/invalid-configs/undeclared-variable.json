@@ -1,0 +1,14 @@
+{
+  "name": "Variable Test",
+  "children": [],
+  "behaviors": [
+    {
+      "name": "origin",
+      "options": {
+        "hostname": "{{user.PMUSER_UNDEFINED_VAR}}"
+      }
+    }
+  ],
+  "criteria": [],
+  "criteriaMustSatisfy": "all"
+}

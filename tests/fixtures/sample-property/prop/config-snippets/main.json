@@ -1,0 +1,48 @@
+{
+  "rules": {
+    "name": "default",
+    "children": [
+      "#include:Origins.json",
+      "#include:CORS_Policy.json",
+      "#include:Performance.json"
+    ],
+    "behaviors": [
+      {
+        "name": "cpCode",
+        "options": {
+          "value": {
+            "id": 123456,
+            "name": "my-property"
+          }
+        }
+      }
+    ],
+    "criteria": [],
+    "criteriaMustSatisfy": "all",
+    "comments": "Main rule tree for the property",
+    "options": {},
+    "variables": [
+      {
+        "name": "PMUSER_ORIGIN_HOSTNAME",
+        "value": "origin.example.com",
+        "description": "Origin hostname",
+        "hidden": false,
+        "sensitive": false
+      },
+      {
+        "name": "PMUSER_CORS_ORIGINS",
+        "value": "https://www.example.com",
+        "description": "Allowed CORS origins",
+        "hidden": false,
+        "sensitive": false
+      },
+      {
+        "name": "PMUSER_API_KEY",
+        "value": "secret-key-value",
+        "description": "API key for backend",
+        "hidden": true,
+        "sensitive": true
+      }
+    ]
+  }
+}

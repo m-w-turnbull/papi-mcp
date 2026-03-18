@@ -1,0 +1,35 @@
+{
+  "name": "CORS Policy",
+  "children": [],
+  "behaviors": [
+    {
+      "name": "modifyOutgoingResponseHeader",
+      "options": {
+        "action": "ADD",
+        "standardAddHeaderName": "OTHER",
+        "customHeaderName": "Access-Control-Allow-Origin",
+        "headerValue": "{{user.PMUSER_CORS_ORIGINS}}"
+      }
+    },
+    {
+      "name": "modifyOutgoingResponseHeader",
+      "options": {
+        "action": "ADD",
+        "standardAddHeaderName": "OTHER",
+        "customHeaderName": "Access-Control-Allow-Methods",
+        "headerValue": "GET, POST, OPTIONS"
+      }
+    }
+  ],
+  "criteria": [
+    {
+      "name": "requestMethod",
+      "options": {
+        "matchOperator": "IS",
+        "value": "OPTIONS"
+      }
+    }
+  ],
+  "criteriaMustSatisfy": "all",
+  "comments": "CORS policy for cross-origin requests"
+}

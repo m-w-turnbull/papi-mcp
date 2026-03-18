@@ -1,0 +1,14 @@
+[
+  {
+    "cnameFrom": "www.example.com",
+    "cnameTo": "www.example.com.edgesuite.net",
+    "cnameType": "EDGE_HOSTNAME",
+    "edgeHostnameId": "ehn_123456"
+  },
+  {
+    "cnameFrom": "api.example.com",
+    "cnameTo": "api.example.com.edgesuite.net",
+    "cnameType": "EDGE_HOSTNAME",
+    "edgeHostnameId": "ehn_123457"
+  }
+]

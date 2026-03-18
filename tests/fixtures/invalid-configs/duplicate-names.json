@@ -1,0 +1,25 @@
+{
+  "rules": {
+    "name": "default",
+    "children": [
+      {
+        "name": "Cache Rule",
+        "children": [],
+        "behaviors": [{"name": "caching", "options": {"behavior": "MAX_AGE", "ttl": "1d"}}],
+        "criteria": [],
+        "criteriaMustSatisfy": "all"
+      },
+      {
+        "name": "Cache Rule",
+        "children": [],
+        "behaviors": [{"name": "caching", "options": {"behavior": "NO_STORE"}}],
+        "criteria": [],
+        "criteriaMustSatisfy": "all"
+      }
+    ],
+    "behaviors": [],
+    "criteria": [],
+    "criteriaMustSatisfy": "all",
+    "variables": []
+  }
+}

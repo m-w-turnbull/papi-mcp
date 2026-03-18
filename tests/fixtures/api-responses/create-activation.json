@@ -1,0 +1,12 @@
+{
+  "activationId": "atv_12345",
+  "propertyId": "prp_12345",
+  "propertyVersion": 5,
+  "network": "STAGING",
+  "status": "PENDING",
+  "activationType": "ACTIVATE",
+  "acknowledgeAllWarnings": true,
+  "fastPush": true,
+  "notifyEmails": ["team@example.com"],
+  "note": "Automated activation via papi-mcp"
+}

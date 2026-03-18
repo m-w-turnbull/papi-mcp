@@ -1,0 +1,12 @@
+{
+  "activationId": "atv_12345",
+  "propertyId": "prp_12345",
+  "propertyVersion": 5,
+  "network": "STAGING",
+  "status": "ACTIVE",
+  "activationType": "ACTIVATE",
+  "submitDate": "2024-01-15T10:30:00Z",
+  "updateDate": "2024-01-15T10:35:00Z",
+  "notifyEmails": ["team@example.com"],
+  "note": "Automated activation via papi-mcp"
+}

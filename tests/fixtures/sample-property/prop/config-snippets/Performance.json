@@ -1,0 +1,30 @@
+{
+  "name": "Performance",
+  "children": [],
+  "behaviors": [
+    {
+      "name": "caching",
+      "options": {
+        "behavior": "MAX_AGE",
+        "mustRevalidate": false,
+        "ttl": "7d",
+        "defaultTtl": "7d"
+      }
+    },
+    {
+      "name": "prefetching",
+      "options": {
+        "enabled": true
+      }
+    },
+    {
+      "name": "http2",
+      "options": {
+        "enabled": true
+      }
+    }
+  ],
+  "criteria": [],
+  "criteriaMustSatisfy": "all",
+  "comments": "Performance optimizations"
+}

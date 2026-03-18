@@ -1,0 +1,11 @@
+{
+  "name": "my-property",
+  "productId": "prd_Fresca",
+  "contractId": "ctr_C-1234",
+  "groupId": 67890,
+  "version": "0.1.0",
+  "isSecure": false,
+  "edgeGridConfig": {
+    "section": "default"
+  }
+}

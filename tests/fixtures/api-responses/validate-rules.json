@@ -1,0 +1,19 @@
+{
+  "propertyId": "prp_12345",
+  "propertyVersion": 5,
+  "ruleFormat": "v2024-02-12",
+  "errors": [
+    {
+      "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/behavior_option_value",
+      "errorLocation": "#/rules/children/0/behaviors/0/options",
+      "detail": "The origin hostname is not valid"
+    }
+  ],
+  "warnings": [
+    {
+      "type": "https://problems.luna.akamaiapis.net/papi/v0/validation/behavior_deprecated",
+      "errorLocation": "#/rules/children/1/behaviors/0",
+      "detail": "The behavior 'prefetching' is deprecated"
+    }
+  ]
+}

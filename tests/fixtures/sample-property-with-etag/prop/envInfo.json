@@ -1,0 +1,17 @@
+{
+  "name": "my-property",
+  "propertyId": 12345,
+  "propertyName": "my-property",
+  "groupId": 67890,
+  "isSecure": false,
+  "latestVersionInfo": {
+    "propertyVersion": 5,
+    "updatedByUser": "user@example.com",
+    "updatedDate": "2024-01-15T10:30:00Z",
+    "productionStatus": "ACTIVE",
+    "stagingStatus": "ACTIVE",
+    "productId": "prd_Fresca",
+    "ruleFormat": "v2024-02-12"
+  },
+  "lastKnownRuleTreeEtag": "different-local-etag"
+}

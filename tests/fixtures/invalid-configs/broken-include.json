@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "name": "default",
+    "children": [
+      "#include:NonExistentFile.json"
+    ],
+    "behaviors": [],
+    "criteria": [],
+    "criteriaMustSatisfy": "all",
+    "variables": []
+  }
+}

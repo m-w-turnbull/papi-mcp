@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.omc/
+*.log
+.env
+.edgerc
+.papi-mcp.json
+tests/fixtures/.tmp-*

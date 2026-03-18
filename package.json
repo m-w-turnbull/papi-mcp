@@ -1,0 +1,33 @@
+{
+  "name": "papi-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Akamai Property Manager (PAPI) configurations",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "papi-mcp": "dist/server.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "dev": "tsx src/server.ts",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "akamai-edgegrid": "^3.5.0",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.1",
+    "tsx": "^4.19.4",
+    "@vitest/coverage-v8": "^3.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

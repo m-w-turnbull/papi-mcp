@@ -1,0 +1,6 @@
+{
+  "type": "https://problems.luna.akamaiapis.net/papi/v0/authentication/unauthorized",
+  "title": "Unauthorized",
+  "status": 401,
+  "detail": "The credentials you provided are invalid or expired"
+}
