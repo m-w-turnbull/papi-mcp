@@ -1,6 +1,6 @@
 {
   "name": "@mwturnbull/papi-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for Akamai Property Manager (PAPI) configurations",
   "type": "module",
   "main": "dist/server.js",
