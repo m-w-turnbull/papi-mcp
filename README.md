@@ -80,7 +80,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 |------|-------------|
 | `write_snippet` | Create or update a config snippet file. Validates against PapiRule schema. |
 | `apply_behavior` | Add or modify a single behavior in an existing snippet. Useful for targeted changes. |
-| `create_branch` | Create git branch following `akamai/<type>/<description>` naming convention. Types: feature, fix, chore, docs, refactor. |
+| `create_branch` | Create git branch following `akamai/<type>/<description>` naming convention. Types: feature, fix, refactor, chore. |
 | `create_merge_request` | Commit changes, push branch, and open a GitLab MR or GitHub PR. Auto-detects git provider. |
 
 ### Activate & Pipeline (3 tools)
@@ -158,12 +158,21 @@ export GITHUB_TOKEN=ghp_xxxx
 
 ### Property Metadata (envInfo.json)
 
-Auto-detected from property repo structure. Place in `{propertyId}_pm/envInfo.json`:
+Auto-detected from property repo structure. Place in `{propertyName}/envInfo.json`:
 
 ```json
 {
-  "propertyId": "prp_12345",
-  "groupId": "grp_54321"
+  "name": "my-property",
+  "propertyId": 12345,
+  "propertyName": "my-property",
+  "groupId": 67890,
+  "isSecure": false,
+  "latestVersionInfo": {
+    "propertyVersion": 5,
+    "productionStatus": "ACTIVE",
+    "stagingStatus": "ACTIVE",
+    "ruleFormat": "v2024-02-12"
+  }
 }
 ```
 

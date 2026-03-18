@@ -7,8 +7,9 @@ An AI agent for authoring, modifying, validating, and activating Akamai Property
 
 ```
 Claude Code / Claude Desktop  ──┐
-                                 ├── MCP (stdio) ──▶  MCP Server (Akamai Skills)  →  GitLab/GitHub MR/PR  →  Staging/Production
-VS Code Copilot Chat  ──────────┘
+                                 ├── MCP (stdio) ──▶  MCP Server (Akamai Tools)  ──▶  PAPI API (read/validate/activate)
+VS Code Copilot Chat  ──────────┘                          │
+                                                           └──▶  Git Provider (GitLab/GitHub MR/PR)
 ```
 
 ### Three Layers
